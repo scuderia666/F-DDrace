@@ -1635,6 +1635,9 @@ void CGameContext::OnClientRejoin(int ClientID)
 
 	int Zone = GetPlayerChar(ClientID) ? GetPlayerChar(ClientID)->m_TuneZone : 0;
 	SendTuningParams(ClientID, Zone);
+
+	CNetMsg_Sv_ReadyToEnter m;
+	Server()->SendPackMsg(&m, MSGFLAG_VITAL|MSGFLAG_FLUSH, ClientID);
 }
 
 void CGameContext::MapDesignChangeDone(int ClientID)
