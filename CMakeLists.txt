@@ -71,7 +71,7 @@ option(CLIENT "Compile client" OFF)
 option(ANTIBOT "Enable support for a dynamic anticheat library" OFF)
 option(DOWNLOAD_DEPENDENCIES "Download dependencies (only available on Windows)" ${AUTO_DEPENDENCIES_DEFAULT})
 option(DOWNLOAD_GTEST "Download and compile GTest if not found" ${AUTO_DEPENDENCIES_DEFAULT})
-option(PREFER_BUNDLED_LIBS "Prefer bundled libraries over system libraries" ${AUTO_DEPENDENCIES_DEFAULT})
+option(PREFER_BUNDLED_LIBS "Prefer bundled libraries over system libraries" ON)
 option(DEV "Don't generate stuff necessary for packaging" OFF)
 
 set(OpenGL_GL_PREFERENCE LEGACY)
